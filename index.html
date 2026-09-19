@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Minimal Store</h1>
+    <div class="cart-btn" onclick="toggleCart()">
+      🛒 Cart (<span id="cart-count">0</span>)
+    </div>
+  </header>
+
+  <main>
+    <h2>Featured Products</h2>
+    <div class="product-grid" id="product-grid"></div>
+  </main>
+
+  <!-- Cart Modal -->
+  <div class="cart-modal" id="cart-modal">
+    <div class="cart-content">
+      <span class="close-btn" onclick="toggleCart()">&times;</span>
+      <h2>Your Shopping Cart</h2>
+      <ul id="cart-items"></ul>
+      <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
+      <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
